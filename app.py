@@ -399,7 +399,7 @@ if st.session_state.step == "birth":
     st.markdown('<div class="step-label">Step 1 of 3 — Where and when you arrived</div>', unsafe_allow_html=True)
 
     with st.form("birth_form"):
-        name = st.text_input("Your first name", placeholder="Jenny")
+        name = st.text_input("Your first name", placeholder="e.g. Olivia")
 
         col1, col2 = st.columns(2)
         with col1:
