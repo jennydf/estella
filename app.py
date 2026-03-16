@@ -403,20 +403,20 @@ if st.session_state.step == "birth":
 
         col1, col2 = st.columns(2)
         with col1:
-            birthdate  = st.text_input("Birth date", placeholder="MM/DD/YYYY", value="11/19/1982")
-            birth_city = st.text_input("Birth city", placeholder="Fresno, CA", value="Fresno, CA")
+            birthdate  = st.text_input("Birth date", placeholder="MM/DD/YYYY")
+            birth_city = st.text_input("Birth city", placeholder="e.g. Fresno, CA")
         with col2:
-            birth_time = st.text_input("Birth time", placeholder="e.g. 1:45 AM", value="1:45 AM")
+            birth_time = st.text_input("Birth time", placeholder="e.g. 1:45 AM")
             st.caption("Birth time matters for rising sign and Human Design. Check your birth certificate if unsure.")
 
         st.markdown("**Your astrology** — enter what you know, skip what you don't")
         col1, col2, col3 = st.columns(3)
         with col1:
-            sun_sign    = st.selectbox("Sun sign",    ["— select —"] + ASTRO_SIGNS, index=10)
+            sun_sign    = st.selectbox("Sun sign",    ["— select —"] + ASTRO_SIGNS)
         with col2:
-            moon_sign   = st.selectbox("Moon sign",   ["— select —"] + ASTRO_SIGNS, index=9)
+            moon_sign   = st.selectbox("Moon sign",   ["— select —"] + ASTRO_SIGNS)
         with col3:
-            rising_sign = st.selectbox("Rising sign", ["— select —"] + ASTRO_SIGNS, index=5)
+            rising_sign = st.selectbox("Rising sign", ["— select —"] + ASTRO_SIGNS)
 
         st.markdown("**Your Human Design** — find yours free at mybodygraph.com")
         col1, col2, col3 = st.columns(3)
